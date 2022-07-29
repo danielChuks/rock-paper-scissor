@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useStoreContext } from "../context/store";
 import RenderView from "../views/RenderView";
+// import Player from "./Player";
 
 const Attacher = () => {
   const {reach} = useStoreContext()
@@ -10,9 +11,11 @@ const Attacher = () => {
   });
 
   return (
-    <>      
-      {RenderView(state,setState,reach)}
-    </>
+    // <Player>      
+      <>
+        {RenderView(state, setState, reach)}
+      </>
+    // </Player>
   )
 }
 

@@ -35,8 +35,7 @@ const {bal, defaults, setState, acc, reach} = useStoreContext()
     const fundAccount = async (fundAmount) => {
         await reach.fundFromFaucet(acc, reach.parseCurrency(fundAmount))
         setState(prev => ({...prev, view: 'DeployerOrAttacher'}))
-      }
-    
+      }    
       const skipFundAccount =  () => setState(prev => ({...prev, view: 'DeployerOrAttacher'}));
       
     return (

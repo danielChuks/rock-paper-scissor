@@ -2,6 +2,7 @@ import { loadStdlib } from '@reach-sh/stdlib';
 import { AppViewWrapper, ConnectAccount, DeployerOrAttacher, FundAccount } from '../../views/AppView';
 import { AcceptTerms, Attach, AttacherWrapper, Attaching, WaitingForTurn } from '../../views/AttacherViews';
 import { Deploy, DeployerWrapper, Deploying, SetWager, WaitingForAttacher } from '../../views/DeployerViews';
+import { Done, GetHand, Timeout, WaitingForResult } from '../../views/PlayerViews';
 
 const reach = loadStdlib(process.env);
 const {standardUnit} = reach;
@@ -32,6 +33,11 @@ const views = {
         'Deploy':Deploy,
         'Deploying':Deploying,
         'WaitingForAttacher':WaitingForAttacher,
+        // new
+        'GetHand':GetHand, 
+        'WaitingForResult':WaitingForResult,
+        'Done':Done,
+        'Timeout':Timeout
     },
     AttacherViews: {
         'Wrapper': AttacherWrapper,
@@ -39,6 +45,12 @@ const views = {
         'Attaching':  Attaching,
         'AcceptTerms':AcceptTerms,
         'WaitingForTurn':WaitingForTurn,
+
+        // new
+        'GetHand':GetHand, 
+        'WaitingForResult':WaitingForResult,
+        'Done':Done,
+        'Timeout':Timeout
     }
 }
 
